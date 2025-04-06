@@ -1,0 +1,10 @@
+^C:\USERS\USER\DESKTOP\РАБОТА\CPP\CPP_PROJECT\BUILD\CMAKEFILES\8C624D5FCE97067000C270B28E4C9877\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/User/Desktop/Работа/cpp/cpp_project -BC:/Users/User/Desktop/Работа/cpp/cpp_project/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/User/Desktop/Работа/cpp/cpp_project/build/toy_interpreter.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

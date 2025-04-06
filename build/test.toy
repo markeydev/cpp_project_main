@@ -1,0 +1,43 @@
+# Простая функция суммирования
+def sum(a, b)
+    # Просто возвращаем сумму аргументов
+    return a + b
+
+# Функция факториала с правильной хвостовой рекурсией
+def factorial(n)
+    # Вспомогательная функция
+    def helper(i, acc)
+        condition = i <= n
+        return if condition then helper(i + 1, acc * i) else acc
+    # Вызов вспомогательной функции и возврат результата
+    result = helper(1, 1)
+    # Явный return в конце основной функции
+    return result
+
+# Функция Фибоначчи с хвостовой рекурсией
+def fibonacci(n)
+    # Вспомогательная функция
+    def fib_helper(n, a, b)
+        condition = n > 0
+        return if condition then fib_helper(n - 1, b, a + b) else a
+    # Сразу возвращаем результат вспомогательной функции
+    # Обязательный return в конце каждой функции
+    return fib_helper(n, 0, 1)
+
+# Функция проверки четности
+def is_even(n)
+    remainder = n / 2
+    remainder = remainder * 2
+    result = n == remainder
+    return result
+
+# Расчёт степени числа
+def power(base, exponent)
+    def power_helper(base, exponent, result)
+        condition = exponent == 0
+        return if condition then result else power_helper(base, exponent - 1, result * base)
+    return power_helper(base, exponent, 1)
+
+# Основная точка входа, вычисляем и возвращаем результат
+result = factorial(5)
+return result
